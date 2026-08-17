@@ -1,19 +1,33 @@
 {
   "compilerOptions": {
     "target": "ES2021",
-    "module": "nodenext",
-    "moduleResolution": "nodenext",
+    "module": "commonjs",
+    "moduleResolution": "node",
     "outDir": "dist",
     "rootDir": "src",
+
     "strict": true,
+    "noImplicitAny": false,
+
     "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "resolveJsonModule": true,
+
     "sourceMap": true,
-    "declaration": false
+    "declaration": false,
+
+    "types": ["node", "express", "jsonwebtoken"]
   },
+
   "include": ["src/**/*.ts"],
-  "exclude": ["node_modules", "dist","**/*.test.ts",
-    "**/*.spec.ts"]
+
+  "exclude": [
+    "node_modules",
+    "dist",
+    "**/*.test.ts",
+    "**/*.spec.ts"
+  ]
 }
